@@ -4,6 +4,7 @@ export type Appearance = 'light';
 
 // Remove dark and system, only light supported now.
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const applyTheme = (appearance: Appearance) => {
     // Always remove 'dark' class to force light theme
     document.documentElement.classList.remove('dark');
