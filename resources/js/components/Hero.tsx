@@ -3,9 +3,10 @@ import profile from '../assets/marvinramos.jpg';
 import { useEffect, useState } from "react";
 import { TypeAnimation } from 'react-type-animation';
 
-const hero = () => {
+const Hero = () => {
 
     const [isVisible, setIsVisible] = useState(false);
+
     useEffect(() => {
         setIsVisible(true);
     }, []);
@@ -15,7 +16,7 @@ const hero = () => {
             <div className="absolute inset-0">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-green-600/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 tranform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-green-600/5 to-transparent"></div>
+                <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-green-600/5 to-transparent"></div>
             </div>
 
             <div className="container mx-auto px-6 py-20 relative z-10">
@@ -23,7 +24,7 @@ const hero = () => {
                     <div className="space-y-8">
                         <div className="space-y-4">
                             <p className={`text-green-400 font-semibold text-lg transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-                                Get Read to Start Work
+                                Get Ready to Start Work
                             </p>
                             <h1 className={`text-5xl md:text-7xl font-black text-white leading-tight transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
                                 <span className="text-2xl">Hello, I'm</span> <br />
@@ -70,7 +71,7 @@ const hero = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={`relative transtion-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+                    <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
                         <div className="relative">
                             <div className="w-full max-w-lg mx-auto">
                                 <div className="relative group">
@@ -88,4 +89,4 @@ const hero = () => {
     )
 }
 
-export default hero
+export default Hero;

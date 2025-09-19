@@ -28,12 +28,14 @@ const Experience = () => {
       { threshold: 0.3 }
     );
 
-    itemRefs.current.forEach((el) => {
+    const currentRefs = itemRefs.current;
+
+    currentRefs.forEach((el) => {
       if (el) observer.observe(el);
     });
 
     return () => {
-      itemRefs.current.forEach((el) => {
+      currentRefs.forEach((el) => {
         if (el) observer.unobserve(el);
       });
     };
