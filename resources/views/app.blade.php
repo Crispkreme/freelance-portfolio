@@ -14,7 +14,7 @@
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased bg-gray-900">
+    <body class="font-sans antialiased {{ request()->routeIs('home') ? 'bg-gray-900' : 'bg-white' }}">
         @inertia
     </body>
 </html>
